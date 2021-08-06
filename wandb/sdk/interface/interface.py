@@ -526,8 +526,8 @@ class BackendSender(object):
         return record
 
     def _publish(self, record: pb.Record, local: bool = None) -> None:
-        if self._process and not self._process.is_alive():
-            raise Exception("The wandb backend process has shutdown")
+        #if self._process and not self._process.is_alive():
+        #    raise Exception("The wandb backend process has shutdown")
         if local:
             record.control.local = local
         if self.record_q:
